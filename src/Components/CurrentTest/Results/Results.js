@@ -40,7 +40,7 @@ useEffect(() => {
         if (index > 0) await delay(200);
 
         const response = await axios.get(
-          `http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/characteristics/${char.characteristicId}`,
+          `http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/characteristics/${char.characteristicId}`,
           { headers: { Authorization: `Bearer ${authToken}` } }
         );
 

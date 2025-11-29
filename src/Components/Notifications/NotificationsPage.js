@@ -24,7 +24,7 @@ const NotificationsPage = () => {
       if (!token) return;
 
       const response = await axios.get(
-        `http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/users/${userId}`,
+        `http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/users/${userId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -78,7 +78,7 @@ const NotificationsPage = () => {
       const token = localStorage.getItem('authToken');
 
       const response = await axios.get(
-        `http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/notifications/user-notifications`,
+        `http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/notifications/user-notifications`,
         {
           params: { pageNumber: currentPage, pageSize: notificationsPerPage },
           headers: { Authorization: `Bearer ${token}` },

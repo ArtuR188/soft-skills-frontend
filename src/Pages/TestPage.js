@@ -20,7 +20,7 @@ const TestPage = () => {
   const getCurrentTest = useCallback(async (authToken) => {
     try {
       const testResp = await axios.get(
-        `http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/tests/${id}`,
+        `http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/tests/${id}`,
         {
           headers: { Authorization: `Bearer ${authToken}` },
         }
@@ -104,7 +104,7 @@ const TestPage = () => {
         return;
     }
 
-    const url = `http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/users/${userId}/tests/${id}/results`;
+    const url = `http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/users/${userId}/tests/${id}/results`;
 
    try {
     const response = await axios.post(url, formattedAnswers, {

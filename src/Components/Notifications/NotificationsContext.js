@@ -36,7 +36,7 @@ export const NotificationsProvider = ({ children }) => {
   try {
     const requests = notificationIds.map(id =>
       axios.patch(
-        `http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/notifications/${id}`,
+        `http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/notifications/${id}`,
         { status: 'read' },
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -64,7 +64,7 @@ export const NotificationsProvider = ({ children }) => {
     fetchNotifications();
   
     const eventSource = new EventSource(
-      'http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/notifications/stream'
+      'http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/notifications/stream'
     );
   
     eventSource.onmessage = (event) => {

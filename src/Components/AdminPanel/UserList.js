@@ -62,7 +62,7 @@ const [courseOptions] = useState([1, 2, 3, 4]);
   const fetchUsers = async (authToken) => {
     try {
       const response = await axios.get(
-        "http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/users",
+        "http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/users",
         {
           headers: { Authorization: `Bearer ${authToken}` },
         }
@@ -117,7 +117,7 @@ const [courseOptions] = useState([1, 2, 3, 4]);
     const authToken = localStorage.getItem("authToken");
     try {
       await axios.patch(
-        `http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/users/${currentUser._id}`,
+        `http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/users/${currentUser._id}`,
         editFormData,
         {
           headers: { Authorization: `Bearer ${authToken}` },

@@ -29,7 +29,7 @@ const NotificationForm = () => {
       return;
     }
 
-    fetch("http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/users", {
+    fetch("http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/users", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -53,7 +53,7 @@ const NotificationForm = () => {
         setError(err.message || "Failed to load users");
       });
 
-    fetch("http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/tests", {
+    fetch("http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/tests", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -156,7 +156,7 @@ const NotificationForm = () => {
       };
     }
 
-    fetch("http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/notifications", {
+    fetch("http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/notifications", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

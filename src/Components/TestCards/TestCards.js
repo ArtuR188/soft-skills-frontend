@@ -28,7 +28,7 @@ export default function TestCards() {
   const fetchTests = async (authToken, retries = 3, delay = 1000) => {
     try {
       const response = await axios.get(
-        "http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/tests",
+        "http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/tests",
         { headers: { Authorization: `Bearer ${authToken}` } }
       );
 
@@ -52,8 +52,8 @@ export default function TestCards() {
     const authToken = localStorage.getItem("authToken");
     if (!authToken) return null;
     const url = id === "belbin" 
-      ? `http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/tests/belbin` 
-      : `http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/tests/${id}`;
+      ? `http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/tests/belbin` 
+      : `http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/tests/${id}`;
 
     try {
       const response = await axios.get(url, {

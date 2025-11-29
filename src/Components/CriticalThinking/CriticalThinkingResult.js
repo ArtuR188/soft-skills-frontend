@@ -64,7 +64,7 @@ const CriticalThinkingResults = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/users/${userId}`,
+        `http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/users/${userId}`,
         {
           method: "GET",
           headers: {
@@ -127,7 +127,7 @@ const CriticalThinkingResults = () => {
     for (const id of uniqueCharIds) {
       try {
         const res = await fetch(
-          `http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/characteristics/${id}`,
+          `http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/characteristics/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

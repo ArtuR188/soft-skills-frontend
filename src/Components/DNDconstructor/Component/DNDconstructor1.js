@@ -138,7 +138,7 @@ function DNDconstructor() {
       const responses = await Promise.all(
         questionsForApi.map((question) =>
           axios.post(
-            "http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/questions",
+            "http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/questions",
             question,
             {
               headers: {
@@ -159,7 +159,7 @@ function DNDconstructor() {
       };
 
       const testResponse = await axios.post(
-        "http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/tests",
+        "http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/tests",
         testData,
         {
           headers: {
@@ -233,7 +233,7 @@ function DNDconstructor() {
   const fetchCharacteristics = async (authToken) => {
     try {
       const response = await axios.get(
-        "http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/characteristics",
+        "http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/characteristics",
         {
           headers: { Authorization: `Bearer ${authToken}` },
         }

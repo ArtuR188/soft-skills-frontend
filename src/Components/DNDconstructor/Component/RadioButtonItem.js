@@ -46,7 +46,7 @@ const RadioButtonItem = ({
     const authToken = localStorage.getItem("authToken");
     try {
       const response = await axios.get(
-        "http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/characteristics",
+        "http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/characteristics",
         {
           headers: { Authorization: `Bearer ${authToken}` },
         }

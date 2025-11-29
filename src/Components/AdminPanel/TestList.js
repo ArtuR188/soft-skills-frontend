@@ -20,7 +20,7 @@ function TestList() {
   const fetchTests = async (authToken) => {
     try {
       const testsResponse = await axios.get(
-        "http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/tests",
+        "http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/tests",
         {
           headers: { Authorization: `Bearer ${authToken}` },
         }
@@ -35,7 +35,7 @@ function TestList() {
     try {
       const authToken = localStorage.getItem("authToken");
       await axios.delete(
-        `http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/tests/${testId}`,
+        `http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com/tests/${testId}`,
         {
           headers: { Authorization: `Bearer ${authToken}` },
         }
