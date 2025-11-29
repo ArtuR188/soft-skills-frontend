@@ -23,8 +23,8 @@ const login = async (formData) => {
 };
 
 const logout = async () => {
-  localStorage.removeItem("authToken");
-  localStorage.removeItem("userId");
+  localStorage.removeItem('authToken');
+  localStorage.removeItem('userId');
 };
 
 export default {
@@ -32,3 +32,4 @@ export default {
   login,
   logout
 };
+в

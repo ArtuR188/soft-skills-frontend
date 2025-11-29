@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./BelbinTest.css";
 
-const API_URL = "http://ec2-13-60-83-13.eu-north-1.compute.amazonaws.com:3000/tests/677ffc10bc648d0df2743ff7";
+const API_URL = "http://ec2-13-61-182-81.eu-north-1.compute.amazonaws.com";
 
 const BelbinTest = () => {
   const [test, setTest] = useState(null);
